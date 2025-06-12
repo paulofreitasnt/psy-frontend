@@ -1,8 +1,19 @@
 let loginButton = document.getElementById('btn-login');
+let registerButton = document.getElementById('btn-register');
 
 loginButton.addEventListener('click', function() {
     let password = document.getElementById('input-password');
     let email = document.getElementById('input-email');
+
+    if(validarCampos(email, password) === false){
+        return;
+    }
+
+    if (validarEmail(email.value) === false) {
+        alert('Por favor, insira um email válido.');
+        return;
+    }
+
     let body = {
         email: email.value,
         password: password.value
@@ -29,4 +40,23 @@ loginButton.addEventListener('click', function() {
         alert('Ocorreu um erro ao tentar fazer login. Por favor, tente novamente mais tarde.');
         console.error('Erro ao fazer login:', err);
     });
+});
+
+function validarCampos(email, password){
+    validarCampos = (email, password) => {
+        if (email.value === '' || password.value === '') {
+            alert('Preencha todos os campos!');
+            return false;
+        }
+        return true;
+    }
+}
+
+function validarEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
+registerButton.addEventListener('click', function() {
+    window.location.href = 'pages/register.html';
 });
