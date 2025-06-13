@@ -29,7 +29,6 @@ loginButton.addEventListener('click', function() {
             if (result.status === 200) {
                 result.json().then(data => {
                     localStorage.setItem('token', data.token);
-                    alert('Bem vindo!');
                     window.location.href = 'pages/home.html';
                 });
             } else {
