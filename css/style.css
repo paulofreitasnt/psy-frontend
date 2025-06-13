@@ -127,3 +127,129 @@ body {
 ::-moz-placeholder { color: #b2c6e2; }
 :-ms-input-placeholder { color: #b2c6e2; }
 ::placeholder { color: #b2c6e2; }
+
+.home-container {
+    width: 100vw;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eaf6ff 0%, #b2c6e2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+.home-header {
+    width: 100%;
+    background: #4a90e2;
+    color: #fff;
+    padding: 32px 0 24px 0;
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 12px rgba(74, 144, 226, 0.10);
+}
+
+.home-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 32px auto 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(74, 144, 226, 0.10);
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: row;      /* Altera para linha */
+    gap: 32px;
+    justify-content: center;  /* Centraliza as colunas */
+}
+
+/* ...código existente... */
+
+/* Estilo para listas da home */
+.home-section {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 0; /* Remove o margin-bottom para evitar espaço extra */
+    background: #f7fbff;
+    border-radius: 12px;
+    padding: 20px 18px;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.06);
+    min-width: 0;
+}
+
+.home-section-title {
+    color: #357abd;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.home-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 8px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.home-list li {
+    background: #eaf6ff;
+    border: 1px solid #b2c6e2;
+    border-radius: 7px;
+    padding: 10px 14px;
+    color: #222;
+    font-size: 1rem;
+    transition: box-shadow 0.2s, border 0.2s;
+}
+
+.home-list li:hover {
+    border: 1px solid #4a90e2;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.13);
+}
+
+.btn-view-all {
+    width: auto;
+    align-self: flex-end;
+    padding: 8px 18px;
+    font-size: 0.98rem;
+    margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+    .home-content {
+        flex-direction: column;
+        gap: 18px;
+        padding: 18px 4vw;
+    }
+    .home-section {
+        margin-bottom: 0;
+        padding: 12px 6px;
+    }
+}
+
+#btn-logout {
+    display: block;
+    margin: 36px auto 0 auto;
+    padding: 12px 36px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #4a90e2 60%, #357abd 100%);
+    color: #fff;
+    border: none;
+    box-shadow: 0 2px 12px rgba(74, 144, 226, 0.13);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+#btn-logout:hover, #btn-logout:focus {
+    background: linear-gradient(90deg, #357abd 60%, #4a90e2 100%);
+    box-shadow: 0 4px 18px rgba(74, 144, 226, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
