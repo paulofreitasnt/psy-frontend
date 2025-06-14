@@ -1,0 +1,124 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eaf6ff 0%, #b2c6e2 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#form-register {
+    background: #fff;
+    padding: 40px 32px 32px 32px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(74, 144, 226, 0.10), 0 1.5px 8px rgba(74, 144, 226, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 370px;
+    min-width: 260px;
+    gap: 5px;
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+#form-register input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #b2c6e2;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f7fbff;
+    color: #222;
+    transition: border 0.2s, box-shadow 0.2s;
+    outline: none;
+    margin-bottom: 8px;
+}
+
+#form-register input:focus {
+    border: 1.5px solid #4a90e2;
+    box-shadow: 0 0 0 2px #eaf6ff;
+}
+
+#btn-register {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 7px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(90deg, #4a90e2 60%, #357abd 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.08);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    outline: none;
+    letter-spacing: 0.5px;
+}
+
+#btn-register:hover, #btn-register:focus {
+    background: linear-gradient(90deg, #357abd 60%, #4a90e2 100%);
+    box-shadow: 0 4px 16px rgba(74, 144, 226, 0.15);
+}
+
+.login-area {
+    width: 100%;
+    text-align: center;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 1rem;
+    color: #4a90e2;
+}
+
+#btn-login {
+    background: #fff;
+    color: #4a90e2;
+    border: 2px solid #4a90e2;
+    border-radius: 7px;
+    padding: 7px 0;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#btn-login:hover, #btn-login:focus {
+    background: #eaf6ff;
+    color: #357abd;
+    border-color: #357abd;
+}
+
+@media (max-width: 500px) {
+    #form-register {
+        padding: 24px 8px 18px 8px;
+        max-width: 98vw;
+        min-width: unset;
+    }
+    .logo {
+        width: 60px;
+        margin-bottom: 8px;
+    }
+    #btn-register, #btn-login {
+        font-size: 0.98rem;
+        padding: 10px 0;
+    }
+}

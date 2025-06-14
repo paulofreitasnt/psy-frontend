@@ -61,7 +61,7 @@ registerButton.addEventListener('click', function() {
     window.location.href = 'pages/register.html';
 });
 
-container.addEventListener('keydown',(event)=>{
+window.addEventListener('keydown',(event)=>{
     if (event.key === 'Enter') {
         loginButton.click();
     }
