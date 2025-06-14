@@ -65,4 +65,4 @@ window.addEventListener('keydown',(event)=>{
     if (event.key === 'Enter') {
         botaoCadastrar.click();
     }
-})
+});
