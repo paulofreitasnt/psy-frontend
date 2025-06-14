@@ -1,5 +1,6 @@
 let loginButton = document.getElementById('btn-login');
 let registerButton = document.getElementById('btn-register');
+let container = document.getElementById('container');
 
 loginButton.addEventListener('click', function() {
     let password = document.getElementById('input-password');
@@ -59,3 +60,9 @@ function validarEmail(email) {
 registerButton.addEventListener('click', function() {
     window.location.href = 'pages/register.html';
 });
+
+container.addEventListener('keydown',(event)=>{
+    if (event.key === 'Enter') {
+        loginButton.click();
+    }
+})
